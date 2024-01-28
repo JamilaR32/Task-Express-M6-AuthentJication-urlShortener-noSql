@@ -8,7 +8,7 @@ const hashPass = async (password) => {
 };
 const generateToken = (user) => {
   const payload = {
-    id: user._id,
+    _id: user._id,
     username: user.username,
   };
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "5h" });
